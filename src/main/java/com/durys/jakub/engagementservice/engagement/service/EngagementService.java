@@ -18,6 +18,9 @@ public class EngagementService extends EngagementServiceGrpc.EngagementServiceIm
 
     @Override
     public void findAllByUser(Int32Value request, StreamObserver<EngagementProto.Engagements> responseObserver) {
+
+        log.info("findAllByUser | {}", request);
+
         EngagementProto.Engagements engagements = EngagementProto.Engagements.newBuilder()
                 .addAllEngagement(engagementRepository.engagements(request))
                 .build();
