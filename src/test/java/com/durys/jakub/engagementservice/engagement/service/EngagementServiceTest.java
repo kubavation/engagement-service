@@ -3,6 +3,7 @@ package com.durys.jakub.engagementservice.engagement.service;
 import com.durys.jakub.engagementservice.model.EngagementProto;
 import com.durys.jakub.engagementservice.model.EngagementServiceGrpc;
 import com.google.protobuf.Int32Value;
+import com.google.protobuf.Int64Value;
 import net.devh.boot.grpc.client.inject.GrpcClient;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -24,7 +25,7 @@ class EngagementServiceTest {
 
     @Test
     void shouldFindAllEngagementsOfUser() {
-        EngagementProto.Engagements engagements = service.findAllByUser(Int32Value.newBuilder().setValue(11).build());
+        EngagementProto.Engagements engagements = service.findAllByUser(Int64Value.newBuilder().setValue(11).build());
 
         assertNotNull(engagements);
         assertTrue(engagements.getEngagementList().isEmpty());
@@ -32,7 +33,7 @@ class EngagementServiceTest {
 
     @Test
     void shouldFindEngagementById() {
-        EngagementProto.Engagement engagement = service.findById(Int32Value.newBuilder().setValue(11).build());
+        EngagementProto.Engagement engagement = service.findById(Int64Value.newBuilder().setValue(11).build());
         assertNotNull(engagement);
     }
 
