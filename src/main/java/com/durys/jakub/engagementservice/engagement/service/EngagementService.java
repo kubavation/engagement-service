@@ -1,6 +1,6 @@
 package com.durys.jakub.engagementservice.engagement.service;
 
-import com.durys.jakub.engagementservice.engagement.repository.EngagementRepository;
+import com.durys.jakub.engagementservice.engagement.repository.GrpcEngagementRepository;
 import com.durys.jakub.engagementservice.model.EngagementProto;
 import com.durys.jakub.engagementservice.model.EngagementServiceGrpc;
 import com.google.protobuf.Int32Value;
@@ -14,7 +14,7 @@ import net.devh.boot.grpc.server.service.GrpcService;
 @RequiredArgsConstructor
 public class EngagementService extends EngagementServiceGrpc.EngagementServiceImplBase {
 
-    private final EngagementRepository engagementRepository;
+    private final GrpcEngagementRepository engagementRepository;
 
     @Override
     public void findAllByUser(Int32Value request, StreamObserver<EngagementProto.Engagements> responseObserver) {

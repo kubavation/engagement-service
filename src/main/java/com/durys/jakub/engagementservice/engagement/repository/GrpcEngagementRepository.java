@@ -8,7 +8,7 @@ import java.util.Collections;
 import java.util.List;
 
 @Repository
-public class EngagementRepository {
+public class GrpcEngagementRepository {
 
     public List<EngagementProto.Engagement> engagements(Int32Value userId) {
         return Collections.emptyList();
