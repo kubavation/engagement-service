@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package model;
 
-option java_package = "durys.jakub.engagementservice.model";
+option java_package = "com.durys.jakub.engagementservice.model";
 option java_outer_classname = "EngagementProto";
 
 import "google/protobuf/timestamp.proto";
