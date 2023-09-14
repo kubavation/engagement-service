@@ -1,6 +1,6 @@
 package com.durys.jakub.engagementservice.engagement.service;
 
-import com.durys.jakub.engagementservice.engagement.repository.GrpcEngagementRepository;
+import com.durys.jakub.engagementservice.engagement.infrastructure.in.GrpcEngagementRepository;
 import com.durys.jakub.engagementservice.model.EngagementProto;
 import com.durys.jakub.engagementservice.model.EngagementServiceGrpc;
 import com.google.protobuf.Int32Value;

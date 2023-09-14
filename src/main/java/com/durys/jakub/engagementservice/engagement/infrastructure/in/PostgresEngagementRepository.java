@@ -6,9 +6,9 @@ import com.durys.jakub.engagementservice.engagement.domain.EngagementRepository;
 import java.util.Collections;
 import java.util.List;
 
-class TestEngagementRepository implements EngagementRepository {
+class PostgresEngagementRepository implements EngagementRepository {
 
-    //todo mock
+    //todo connect to db
 
     @Override
     public List<Engagement> userEngagements(Long userId) {
