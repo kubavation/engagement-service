@@ -2,10 +2,8 @@ package com.durys.jakub.engagementservice.engagement.infrastructure.in;
 
 import com.durys.jakub.engagementservice.engagement.domain.Engagement;
 import com.durys.jakub.engagementservice.engagement.domain.EngagementRepository;
-import org.springframework.cglib.core.Local;
 
 import java.time.LocalDate;
-import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 

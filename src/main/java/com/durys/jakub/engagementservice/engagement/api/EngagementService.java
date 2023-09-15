@@ -1,10 +1,9 @@
-package com.durys.jakub.engagementservice.engagement.service;
+package com.durys.jakub.engagementservice.engagement.api;
 
 import com.durys.jakub.engagementservice.engagement.domain.Engagement;
 import com.durys.jakub.engagementservice.engagement.domain.EngagementRepository;
 import com.durys.jakub.engagementservice.model.EngagementProto;
 import com.durys.jakub.engagementservice.model.EngagementServiceGrpc;
-import com.google.protobuf.Int32Value;
 import com.google.protobuf.Int64Value;
 import com.google.protobuf.Timestamp;
 import io.grpc.stub.StreamObserver;
@@ -12,13 +11,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import net.devh.boot.grpc.server.service.GrpcService;
 
-import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.time.ZoneId;
 import java.time.ZoneOffset;
-import java.time.temporal.TemporalField;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 @GrpcService
 @Slf4j
