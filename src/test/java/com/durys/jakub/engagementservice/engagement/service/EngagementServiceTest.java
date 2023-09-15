@@ -7,7 +7,9 @@ import com.google.protobuf.Int64Value;
 import net.devh.boot.grpc.client.inject.GrpcClient;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.Profile;
 import org.springframework.test.annotation.DirtiesContext;
+import org.springframework.test.context.ActiveProfiles;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -17,6 +19,7 @@ import static org.junit.jupiter.api.Assertions.*;
         "grpc.client.testClient.address=in-process:test"
 })
 @DirtiesContext
+@ActiveProfiles("test")
 class EngagementServiceTest {
 
 
@@ -25,15 +28,13 @@ class EngagementServiceTest {
 
     @Test
     void shouldFindAllEngagementsOfUser() {
-        EngagementProto.Engagements engagements = service.findAllByUser(Int64Value.newBuilder().setValue(11).build());
-
-        assertNotNull(engagements);
-        assertTrue(engagements.getEngagementList().isEmpty());
+        EngagementProto.Engagements engagements = service.findAllByUser(Int64Value.newBuilder().setValue(1).build());
+        assertEquals(2, engagements.getEngagementList().size());
     }
 
     @Test
     void shouldFindEngagementById() {
-        EngagementProto.Engagement engagement = service.findById(Int64Value.newBuilder().setValue(11).build());
+        EngagementProto.Engagement engagement = service.findById(Int64Value.newBuilder().setValue(1).build());
         assertNotNull(engagement);
     }
 
