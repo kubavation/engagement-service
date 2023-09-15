@@ -19,16 +19,16 @@ public final class EngagementProto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 id = 1;</code>
+     * <code>int64 id = 1;</code>
      * @return The id.
      */
-    int getId();
+    long getId();
 
     /**
-     * <code>int32 user_id = 2;</code>
+     * <code>int64 user_id = 2;</code>
      * @return The userId.
      */
-    int getUserId();
+    long getUserId();
 
     /**
      * <code>.google.protobuf.Timestamp from = 3;</code>
@@ -107,12 +107,12 @@ public final class EngagementProto {
               break;
             case 8: {
 
-              id_ = input.readInt32();
+              id_ = input.readInt64();
               break;
             }
             case 16: {
 
-              userId_ = input.readInt32();
+              userId_ = input.readInt64();
               break;
             }
             case 26: {
@@ -174,22 +174,22 @@ public final class EngagementProto {
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private int id_;
+    private long id_;
     /**
-     * <code>int32 id = 1;</code>
+     * <code>int64 id = 1;</code>
      * @return The id.
      */
-    public int getId() {
+    public long getId() {
       return id_;
     }
 
     public static final int USER_ID_FIELD_NUMBER = 2;
-    private int userId_;
+    private long userId_;
     /**
-     * <code>int32 user_id = 2;</code>
+     * <code>int64 user_id = 2;</code>
      * @return The userId.
      */
-    public int getUserId() {
+    public long getUserId() {
       return userId_;
     }
 
@@ -253,11 +253,11 @@ public final class EngagementProto {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (id_ != 0) {
-        output.writeInt32(1, id_);
+      if (id_ != 0L) {
+        output.writeInt64(1, id_);
       }
-      if (userId_ != 0) {
-        output.writeInt32(2, userId_);
+      if (userId_ != 0L) {
+        output.writeInt64(2, userId_);
       }
       if (from_ != null) {
         output.writeMessage(3, getFrom());
@@ -274,13 +274,13 @@ public final class EngagementProto {
       if (size != -1) return size;
 
       size = 0;
-      if (id_ != 0) {
+      if (id_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, id_);
+          .computeInt64Size(1, id_);
       }
-      if (userId_ != 0) {
+      if (userId_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, userId_);
+          .computeInt64Size(2, userId_);
       }
       if (from_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -331,9 +331,11 @@ public final class EngagementProto {
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId();
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
       hash = (37 * hash) + USER_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getUserId();
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getUserId());
       if (hasFrom()) {
         hash = (37 * hash) + FROM_FIELD_NUMBER;
         hash = (53 * hash) + getFrom().hashCode();
@@ -475,9 +477,9 @@ public final class EngagementProto {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        id_ = 0;
+        id_ = 0L;
 
-        userId_ = 0;
+        userId_ = 0L;
 
         if (fromBuilder_ == null) {
           from_ = null;
@@ -577,10 +579,10 @@ public final class EngagementProto {
 
       public Builder mergeFrom(com.durys.jakub.engagementservice.model.EngagementProto.Engagement other) {
         if (other == com.durys.jakub.engagementservice.model.EngagementProto.Engagement.getDefaultInstance()) return this;
-        if (other.getId() != 0) {
+        if (other.getId() != 0L) {
           setId(other.getId());
         }
-        if (other.getUserId() != 0) {
+        if (other.getUserId() != 0L) {
           setUserId(other.getUserId());
         }
         if (other.hasFrom()) {
@@ -618,62 +620,62 @@ public final class EngagementProto {
         return this;
       }
 
-      private int id_ ;
+      private long id_ ;
       /**
-       * <code>int32 id = 1;</code>
+       * <code>int64 id = 1;</code>
        * @return The id.
        */
-      public int getId() {
+      public long getId() {
         return id_;
       }
       /**
-       * <code>int32 id = 1;</code>
+       * <code>int64 id = 1;</code>
        * @param value The id to set.
        * @return This builder for chaining.
        */
-      public Builder setId(int value) {
+      public Builder setId(long value) {
         
         id_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>int32 id = 1;</code>
+       * <code>int64 id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
         
-        id_ = 0;
+        id_ = 0L;
         onChanged();
         return this;
       }
 
-      private int userId_ ;
+      private long userId_ ;
       /**
-       * <code>int32 user_id = 2;</code>
+       * <code>int64 user_id = 2;</code>
        * @return The userId.
        */
-      public int getUserId() {
+      public long getUserId() {
         return userId_;
       }
       /**
-       * <code>int32 user_id = 2;</code>
+       * <code>int64 user_id = 2;</code>
        * @param value The userId to set.
        * @return This builder for chaining.
        */
-      public Builder setUserId(int value) {
+      public Builder setUserId(long value) {
         
         userId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>int32 user_id = 2;</code>
+       * <code>int64 user_id = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearUserId() {
         
-        userId_ = 0;
+        userId_ = 0L;
         onChanged();
         return this;
       }
@@ -1778,14 +1780,14 @@ public final class EngagementProto {
       "\n\020engagement.proto\022\005model\032\037google/protob" +
       "uf/timestamp.proto\032\033google/protobuf/empt" +
       "y.proto\032\036google/protobuf/wrappers.proto\"" +
-      "{\n\nEngagement\022\n\n\002id\030\001 \001(\005\022\017\n\007user_id\030\002 \001" +
-      "(\005\022(\n\004from\030\003 \001(\0132\032.google.protobuf.Times" +
+      "{\n\nEngagement\022\n\n\002id\030\001 \001(\003\022\017\n\007user_id\030\002 \001" +
+      "(\003\022(\n\004from\030\003 \001(\0132\032.google.protobuf.Times" +
       "tamp\022&\n\002to\030\004 \001(\0132\032.google.protobuf.Times" +
       "tamp\"4\n\013Engagements\022%\n\nengagement\030\001 \003(\0132" +
       "\021.model.Engagement2\225\001\n\021EngagementService" +
-      "\022B\n\rFindAllByUser\022\033.google.protobuf.Int3" +
-      "2Value\032\022.model.Engagements\"\000\022<\n\010FindById" +
-      "\022\033.google.protobuf.Int32Value\032\021.model.En" +
+      "\022B\n\rFindAllByUser\022\033.google.protobuf.Int6" +
+      "4Value\032\022.model.Engagements\"\000\022<\n\010FindById" +
+      "\022\033.google.protobuf.Int64Value\032\021.model.En" +
       "gagement\"\000B:\n\'com.durys.jakub.engagement" +
       "service.modelB\017EngagementProtob\006proto3"
     };

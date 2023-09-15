@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Profile;
 class EngagementConfiguration {
 
     @Bean
-    @Primary
+    @Profile("!test")
     EngagementRepository engagementRepository() {
         log.info("creating prod engagement repository");
         return new PostgresEngagementRepository();

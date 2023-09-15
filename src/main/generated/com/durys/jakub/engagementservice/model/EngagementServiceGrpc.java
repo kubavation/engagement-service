@@ -15,27 +15,27 @@ public final class EngagementServiceGrpc {
   public static final java.lang.String SERVICE_NAME = "model.EngagementService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Int32Value,
+  private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Int64Value,
       com.durys.jakub.engagementservice.model.EngagementProto.Engagements> getFindAllByUserMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "FindAllByUser",
-      requestType = com.google.protobuf.Int32Value.class,
+      requestType = com.google.protobuf.Int64Value.class,
       responseType = com.durys.jakub.engagementservice.model.EngagementProto.Engagements.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.google.protobuf.Int32Value,
+  public static io.grpc.MethodDescriptor<com.google.protobuf.Int64Value,
       com.durys.jakub.engagementservice.model.EngagementProto.Engagements> getFindAllByUserMethod() {
-    io.grpc.MethodDescriptor<com.google.protobuf.Int32Value, com.durys.jakub.engagementservice.model.EngagementProto.Engagements> getFindAllByUserMethod;
+    io.grpc.MethodDescriptor<com.google.protobuf.Int64Value, com.durys.jakub.engagementservice.model.EngagementProto.Engagements> getFindAllByUserMethod;
     if ((getFindAllByUserMethod = EngagementServiceGrpc.getFindAllByUserMethod) == null) {
       synchronized (EngagementServiceGrpc.class) {
         if ((getFindAllByUserMethod = EngagementServiceGrpc.getFindAllByUserMethod) == null) {
           EngagementServiceGrpc.getFindAllByUserMethod = getFindAllByUserMethod =
-              io.grpc.MethodDescriptor.<com.google.protobuf.Int32Value, com.durys.jakub.engagementservice.model.EngagementProto.Engagements>newBuilder()
+              io.grpc.MethodDescriptor.<com.google.protobuf.Int64Value, com.durys.jakub.engagementservice.model.EngagementProto.Engagements>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "FindAllByUser"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.google.protobuf.Int32Value.getDefaultInstance()))
+                  com.google.protobuf.Int64Value.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.durys.jakub.engagementservice.model.EngagementProto.Engagements.getDefaultInstance()))
               .setSchemaDescriptor(new EngagementServiceMethodDescriptorSupplier("FindAllByUser"))
@@ -46,27 +46,27 @@ public final class EngagementServiceGrpc {
     return getFindAllByUserMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Int32Value,
+  private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Int64Value,
       com.durys.jakub.engagementservice.model.EngagementProto.Engagement> getFindByIdMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "FindById",
-      requestType = com.google.protobuf.Int32Value.class,
+      requestType = com.google.protobuf.Int64Value.class,
       responseType = com.durys.jakub.engagementservice.model.EngagementProto.Engagement.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.google.protobuf.Int32Value,
+  public static io.grpc.MethodDescriptor<com.google.protobuf.Int64Value,
       com.durys.jakub.engagementservice.model.EngagementProto.Engagement> getFindByIdMethod() {
-    io.grpc.MethodDescriptor<com.google.protobuf.Int32Value, com.durys.jakub.engagementservice.model.EngagementProto.Engagement> getFindByIdMethod;
+    io.grpc.MethodDescriptor<com.google.protobuf.Int64Value, com.durys.jakub.engagementservice.model.EngagementProto.Engagement> getFindByIdMethod;
     if ((getFindByIdMethod = EngagementServiceGrpc.getFindByIdMethod) == null) {
       synchronized (EngagementServiceGrpc.class) {
         if ((getFindByIdMethod = EngagementServiceGrpc.getFindByIdMethod) == null) {
           EngagementServiceGrpc.getFindByIdMethod = getFindByIdMethod =
-              io.grpc.MethodDescriptor.<com.google.protobuf.Int32Value, com.durys.jakub.engagementservice.model.EngagementProto.Engagement>newBuilder()
+              io.grpc.MethodDescriptor.<com.google.protobuf.Int64Value, com.durys.jakub.engagementservice.model.EngagementProto.Engagement>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "FindById"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.google.protobuf.Int32Value.getDefaultInstance()))
+                  com.google.protobuf.Int64Value.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.durys.jakub.engagementservice.model.EngagementProto.Engagement.getDefaultInstance()))
               .setSchemaDescriptor(new EngagementServiceMethodDescriptorSupplier("FindById"))
@@ -127,14 +127,14 @@ public final class EngagementServiceGrpc {
 
     /**
      */
-    default void findAllByUser(com.google.protobuf.Int32Value request,
+    default void findAllByUser(com.google.protobuf.Int64Value request,
         io.grpc.stub.StreamObserver<com.durys.jakub.engagementservice.model.EngagementProto.Engagements> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getFindAllByUserMethod(), responseObserver);
     }
 
     /**
      */
-    default void findById(com.google.protobuf.Int32Value request,
+    default void findById(com.google.protobuf.Int64Value request,
         io.grpc.stub.StreamObserver<com.durys.jakub.engagementservice.model.EngagementProto.Engagement> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getFindByIdMethod(), responseObserver);
     }
@@ -169,7 +169,7 @@ public final class EngagementServiceGrpc {
 
     /**
      */
-    public void findAllByUser(com.google.protobuf.Int32Value request,
+    public void findAllByUser(com.google.protobuf.Int64Value request,
         io.grpc.stub.StreamObserver<com.durys.jakub.engagementservice.model.EngagementProto.Engagements> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getFindAllByUserMethod(), getCallOptions()), request, responseObserver);
@@ -177,7 +177,7 @@ public final class EngagementServiceGrpc {
 
     /**
      */
-    public void findById(com.google.protobuf.Int32Value request,
+    public void findById(com.google.protobuf.Int64Value request,
         io.grpc.stub.StreamObserver<com.durys.jakub.engagementservice.model.EngagementProto.Engagement> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getFindByIdMethod(), getCallOptions()), request, responseObserver);
@@ -202,14 +202,14 @@ public final class EngagementServiceGrpc {
 
     /**
      */
-    public com.durys.jakub.engagementservice.model.EngagementProto.Engagements findAllByUser(com.google.protobuf.Int32Value request) {
+    public com.durys.jakub.engagementservice.model.EngagementProto.Engagements findAllByUser(com.google.protobuf.Int64Value request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getFindAllByUserMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public com.durys.jakub.engagementservice.model.EngagementProto.Engagement findById(com.google.protobuf.Int32Value request) {
+    public com.durys.jakub.engagementservice.model.EngagementProto.Engagement findById(com.google.protobuf.Int64Value request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getFindByIdMethod(), getCallOptions(), request);
     }
@@ -234,7 +234,7 @@ public final class EngagementServiceGrpc {
     /**
      */
     public com.google.common.util.concurrent.ListenableFuture<com.durys.jakub.engagementservice.model.EngagementProto.Engagements> findAllByUser(
-        com.google.protobuf.Int32Value request) {
+        com.google.protobuf.Int64Value request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getFindAllByUserMethod(), getCallOptions()), request);
     }
@@ -242,7 +242,7 @@ public final class EngagementServiceGrpc {
     /**
      */
     public com.google.common.util.concurrent.ListenableFuture<com.durys.jakub.engagementservice.model.EngagementProto.Engagement> findById(
-        com.google.protobuf.Int32Value request) {
+        com.google.protobuf.Int64Value request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getFindByIdMethod(), getCallOptions()), request);
     }
@@ -269,11 +269,11 @@ public final class EngagementServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_FIND_ALL_BY_USER:
-          serviceImpl.findAllByUser((com.google.protobuf.Int32Value) request,
+          serviceImpl.findAllByUser((com.google.protobuf.Int64Value) request,
               (io.grpc.stub.StreamObserver<com.durys.jakub.engagementservice.model.EngagementProto.Engagements>) responseObserver);
           break;
         case METHODID_FIND_BY_ID:
-          serviceImpl.findById((com.google.protobuf.Int32Value) request,
+          serviceImpl.findById((com.google.protobuf.Int64Value) request,
               (io.grpc.stub.StreamObserver<com.durys.jakub.engagementservice.model.EngagementProto.Engagement>) responseObserver);
           break;
         default:
@@ -298,14 +298,14 @@ public final class EngagementServiceGrpc {
           getFindAllByUserMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.google.protobuf.Int32Value,
+              com.google.protobuf.Int64Value,
               com.durys.jakub.engagementservice.model.EngagementProto.Engagements>(
                 service, METHODID_FIND_ALL_BY_USER)))
         .addMethod(
           getFindByIdMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.google.protobuf.Int32Value,
+              com.google.protobuf.Int64Value,
               com.durys.jakub.engagementservice.model.EngagementProto.Engagement>(
                 service, METHODID_FIND_BY_ID)))
         .build();
