@@ -12,6 +12,11 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import net.devh.boot.grpc.server.service.GrpcService;
 
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.ZoneId;
+import java.time.ZoneOffset;
+import java.time.temporal.TemporalField;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -52,8 +57,10 @@ public class EngagementService extends EngagementServiceGrpc.EngagementServiceIm
                 .newBuilder()
                 .setId(engagement.id())
                 .setUserId(engagement.userId())
-                .setFrom(Timestamp.newBuilder().setNanos(0).build())
-                .setTo(Timestamp.newBuilder().setNanos(0).build())
-                .build(); //todo
+                .setFrom(Timestamp.newBuilder().setSeconds(
+                                engagement.from().toEpochSecond(LocalTime.now(), ZoneOffset.UTC)))
+                .setTo(Timestamp.newBuilder().setSeconds(
+                        engagement.from().toEpochSecond(LocalTime.now(), ZoneOffset.UTC)).build())
+                .build();
     }
 }
