@@ -1,4 +1,4 @@
-package com.durys.jakub.engagementservice.engagement.service;
+package com.durys.jakub.engagementservice.engagement.api;
 
 import com.durys.jakub.engagementservice.engagement.domain.Engagement;
 import com.durys.jakub.engagementservice.engagement.domain.EngagementRepository;
